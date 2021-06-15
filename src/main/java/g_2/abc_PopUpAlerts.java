@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class abc_PopUpAlerts {
-
+	    //Stirng name = "Noman";
 	
 	public static void main(String[] args) throws Exception {
 		System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver_91.exe");  
@@ -34,5 +34,6 @@ public class abc_PopUpAlerts {
 	    //alert.dismiss(); //click on cancel button
 	    
 	}
+	
 
 }

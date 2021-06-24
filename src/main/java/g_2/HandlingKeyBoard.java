@@ -14,15 +14,19 @@ public class HandlingKeyBoard {
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Noman\\Desktop\\QA Class\\Selenium\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("http://automationpractice.com/index.php");
+		driver.get("https://www.google.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		
+		WebElement searchX = driver.findElement(By.xpath("//input[@name='q']"));
+		WebElement SearchBtn = driver.findElement(By.xpath("//input[@class='gNO89b']"));
 		Actions act = new Actions(driver);
-		WebElement summerDre = driver.findElement(By.xpath("//ul[@id='homefeatured']/li/div/div/h5/a"));
-		act.click(summerDre).pause(3000).keyDown(Keys.CONTROL)
-										.sendKeys(Keys.ARROW_DOWN).pause(3000).sendKeys(Keys.ARROW_DOWN)
-										.keyUp(Keys.CONTROL).build().perform();
+		act.click(searchX).sendKeys("Banana")
+		.pause(5000).keyDown(Keys.CONTROL)
+		   .sendKeys(Keys.ARROW_DOWN)
+		   .pause(5000).sendKeys(Keys.ARROW_DOWN)
+		   .pause(5000).sendKeys(Keys.ARROW_DOWN)
+		   .keyUp(Keys.CONTROL).click().pause(5000).click(SearchBtn).build().perform();
 		
 		
 		

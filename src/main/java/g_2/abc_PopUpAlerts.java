@@ -6,12 +6,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class abc_PopUpAlerts {
-	    //Stirng name = "Noman";
-	
+
+	// ckkjj - abc
+	//Farhan + abc
 	public static void main(String[] args) throws Exception {
 		System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver_91.exe");  
 	    WebDriver driver = new ChromeDriver();
-	    driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
+        driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
 	    driver.findElement(By.name("proceed")).click(); //clicking on sign in btn
 	    Thread.sleep(5000);
 	    
